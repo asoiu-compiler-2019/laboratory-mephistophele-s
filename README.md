@@ -4,7 +4,6 @@ This translator executes simple statements in Chef language by translating it in
 
 "Hello World" program in Chef:
 
-"""
 Lobsters with Fruit and Nuts.
 
 Ingredients.
@@ -31,7 +30,7 @@ Put eggs into the mixing bowl
 Put hazelnuts into the mixing bowl
 Liquefy contents of the mixing bowl
 Serve 1
-"""
+
 
 # How to use Chef
 
