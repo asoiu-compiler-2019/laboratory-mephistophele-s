@@ -1,28 +1,53 @@
-# compilers-2019
-main repository for lab works
+# Chef programming language translator
 
+This translator executes simple statements in Chef language by translating it in Swift.
 
-add to this repository all your completed work and continue till the end of semester
+"Hello World" program in Chef:
 
+"""
+Lobsters with Fruit and Nuts.
 
-Short reminder about how to fill readme
+Ingredients.
+72 g hazelnuts
+101 g eggs
+108 g lobsters
+111 ml orange
+32 g sugar
+87 ml water
+114 g rice
+100 g durian
 
-1. Short description about your chosen theme
-(add your text here)
-2. Description of your language (types, built-in functions etc.)
-(add your text here)
-3. Description 
-(add your text here)
+Method.
+Put durian into the mixing bowl
+Put lobsters into the mixing bowl
+Put rice into the mixing bowl
+Put orange into the mixing bowl
+Put water into the mixing bowl
+Put sugar into the mixing bowl
+Put orange into the mixing bowl
+Put lobsters into the mixing bowl
+Put lobsters into the mixing bowl
+Put eggs into the mixing bowl
+Put hazelnuts into the mixing bowl
+Liquefy contents of the mixing bowl
+Serve 1
+"""
 
+# How to use Chef
 
-Short reminder about tasks
+There are 2 types of variables: liquid and solid. Liquid have char as there value, solid - integer. To declare solid variable you should state int value, measure - "g", and then name. The same for liquid, but with "ml" measure. The value of liquid variable is the first letter of its name. 
 
-21 feb 1 lab - Backus–Naur form for your language
-28 feb 2 lab - lexical analyzer  - https://hackernoon.com/lexical-analysis-861b8bfe4cb0
-14 mar 3 lab - Syntax analyzer   - http://www.semware.com/html/02-parse.html
-28 mar 4 lab - Semantic analyzer - http://www.semware.com/html/04-parse.html 
-                                   http://www.semware.com/html/05-parse.html     
-                                   http://www.semware.com/html/06-parse.html
-11 apr 5 lab - translator for your diploma project
+You can turn solid vars liquid by using Liquefy command.
 
-["hip","hip"]
+Put command puts var in stack. 
+Serve command prints content of stack.
+
+Title of programm is vital and can be any string.
+Titles "Ingredients" and "Method" are reserved words and also vital.
+
+# How translator works
+
+Lexer splits programm into tokens.
+Syntax analyzer creates syntax tree of commands and variables and finds syntax errors.
+Translator then goes through tree executing commands and finds semantic errors.
+
